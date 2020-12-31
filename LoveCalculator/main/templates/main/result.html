@@ -1,0 +1,51 @@
+
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+
+<section class="content love" style="height: auto !important;">
+    <div class="container container--small" style="height: auto !important;">
+        <div class="result">
+            <h2 class="result__names">
+                {{love.male}}               &amp;
+               {{love.female}}
+            </h2>
+
+            <div class="result__image">
+
+
+                <img class="result__image" src="{% static "img/neutral2.gif" %} " alt="test">
+                <span class="text-muted powered-by">Powered by Giphy.com</span>
+            </div>
+
+            <div class="result__score">
+                {{love.percentage}} %
+            </div>
+            {{love.result}}
+        </div>
+
+        <div class="row">
+          <div class="result-text">
+            Dr. Love thinks that a relationship between {{love.male}} and
+            {{love.female}} has a reasonable chance of working out, but on
+            the other hand, it might not. Your relationship may
+            suffer good and bad times. If things might not be working
+            out as you would like them to, do not hesitate to talk about
+            it with the person involved. Spend time together, talk with each other.
+          </div>
+
+
+        </div>
+
+        <hr>
+
+        <a href="/" class="btn btn--primary">
+          Make another calculation
+        </a>
+
+
+    </div>
+</section>
+
+
+{% endblock content %}

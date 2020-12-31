@@ -1,0 +1,53 @@
+
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+
+<section class="home">
+
+  <div class="content container container--small">
+      <h1>Welcome to this great invention of Doctor Love!</h1>
+
+      <span class="hide-mobile"><p>We all know that a name can tell a lot about a person. Names are not
+      randomly chosen: they all have a meaning.
+      Doctor Love knew this so he made another great invention just for the lonely you!</p>
+
+      <p>Sometimes you'd like to know if a relationship with someone could work
+      out. Therefore Doctor Love himself designed this great machine for you.
+      With The Love Calculator you can calculate the probability of a successful
+      relationship between two people. The Love Calculator is an <em>affective</em>
+      way to get an impression of what the chances are on a relationship between
+      two people.</p></span>
+
+      <p>To find out what the chances for you and your dream partner are, just fill in both <strong>full</strong>
+      names (both first and last name) in the two text boxes below, and press Calculate.</p>
+
+      <!-- belangrijk! -->
+      <form method="post"  name="lf" class="form">
+          {% csrf_token %}
+        <div class="row row--justify-content-between">
+          <div class="form-group">
+            <label for="name1">Your name</label>
+            <input type="text" name="male" id="name1" value="" size="25" autofocus="" placeholder="Full name" required="">
+          </div>
+          <div class="form-group">
+            <label for="name2">Your crush</label>
+            <input type="text" name="female" id="name2" value="" size="25" placeholder="Full name" required="">
+          </div>
+        </div>
+        <div class="row row--justify-content-center">
+          <div class="form-group form-group--color">
+            <button class="btn btn--primary" type="submit">Calculate love</button>
+          </div>
+        </div>
+        <img class="form__image" src="{% static "img/lovecalculator-heart.svg" %} " alt="LOVES">
+      </form>
+      <!-- einde belangrijk! -->
+
+  </div>
+</section>
+
+
+
+
+{% endblock content %}

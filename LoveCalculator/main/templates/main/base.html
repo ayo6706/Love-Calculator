@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+          {% load static %}
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="Calculates the chance on a successful relationship between two people">
+        <meta name="keywords" content="love,valentine,relation,relations,success,successful,happy,cool,calculate,calculator,love calculator,date">
+        <meta name="author" content="Ayomide Onibokun ">
+        <meta name="viewport" content="width=480">
+
+
+        <link rel="stylesheet" href="{% static "css/main.css" %} " type="text/css" media="all">
+
+        <title>The Love Calculator - david &amp; ayo</title>
+
+
+    </head>
+    <body>
+        <header class="header">
+          <div class="container">
+            <div class="row row--justify-content-between row--menu">
+              <div class="title">
+                <a href="#">
+                  <img src="{% static "img/lovecalculator-logo.svg" %} " alt="The Love Calculator">
+                </a>
+              </div> <!-- end header -->
+              <div class="nav-toggle">
+                <span class="nav-toggle-stripe"></span>
+                <span class="nav-toggle-stripe"></span>
+                <span class="nav-toggle-stripe"></span>
+              </div>
+              <div class="menu">
+
+              </div> <!-- end menu -->
+            </div>
+          </div>
+        </header>
+
+         {% block content %}
+
+         {% endblock content %}
+
+         <footer class="footer d-flex align-items-center">
+              <div class="container">
+                <div class="row align-items-center row--justify-content-between">
+                  <p class="footer__copyright">
+                    © The love Calculator Designed By Ayomide Onibokun
+                  </p>
+                  <div class="footer__menu">
+<!--                    <nav>-->
+<!--                      <ul>-->
+<!--                        <li>-->
+<!--                          <a href="#">\</a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                          <a href="#"></a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                          <a href="#"></a>-->
+<!--                        </li>-->
+<!--                      </ul>-->
+<!--                    </nav>-->
+                  </div>
+                </div>
+              </div>
+        </footer>
+    </body>
+
+</html>
+
